@@ -1,0 +1,118 @@
+aside {
+    width: 20%;
+    height: 700px;
+    float: left;
+    margin: 20px 0 0 130px;
+    color: #fff;    
+    .sitebar-reservation-ua {
+        border-radius: 5px;
+        background: linear-gradient(0.1turn, #274964, #396D98, #274964);
+    }
+    .wrap-sitebar-pentagon {
+        height: 100px;
+    }
+    .sitebar-pentagon {
+        background: radial-gradient(circle,#FFF, #C9D4D7);
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 62%);
+        height: 90px;
+        border-radius: 3px;
+        color: #2B4E6C;
+        text-align: center;
+        
+        .sitebar-pentagon-tile-1 {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        .sitebar-pentagon-tile-2 {
+            font-size: 26px;
+            text-transform: uppercase;
+            font-weight: 900;          
+        }
+        .sitebar-pentagon-line {
+            border-top: 2px solid ;
+            width: 50%;
+            margin: auto;            
+            border-image: linear-gradient(0.25turn, #f3f6f7, #00407a, #f3f6f7) 1;
+        }
+        .sitebar-pentagon-star {
+            width: 70px;
+            height: 10px;
+            margin: auto;
+            background-image: url('../../../assets/img/star.svg');
+        }
+    }
+    .sitebar-reservation-title {
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+    }
+    .sitebar-reservation-input {
+        width: 91%;
+        border-radius: 2px;
+        background-image: url('../../../assets/img/calendar.svg');
+        background-position: right;
+        background-repeat: no-repeat;
+        padding-left: 10px;
+    }
+    .sitebar-reservation-input-title {
+        font-size: 12px;
+    }
+    .input-flex {
+        margin-left: 20px;
+    }
+    .search-adults {
+        width: 50%;
+    }
+    .sitebar-reservation-submit {
+        width: 91%;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 2px;
+        border: none;
+        background: linear-gradient(0deg,#3e91c3, #7acefd );
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    .sitebar-reservation-phone-bloc {
+        color: #57ADDE;
+        text-align: center;        
+        font-weight: 500;
+        margin-top: 10px;
+        div {
+            font-size: 16px;
+        }
+        img {
+            width: 5%;
+        }
+    }
+    .aside-info-stock img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: #777 2px 2px 7px;
+        cursor: pointer;
+    }
+    .aside-galery {
+        margin-top: 20px;
+        h3 {
+            color: #00407a;
+        }
+        img {
+            width: 30%;
+            border-radius: 5px;
+            float: left;
+            margin-right: 10px;            
+        }
+        .aside-galery-last {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .aside-grid {
+        display: none;
+    }  
+ }

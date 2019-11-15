@@ -1,0 +1,71 @@
+@import '../../../styles.scss';
+.attendance-main {
+    @include main;
+    .attendance-hide {
+        display: none;
+    }
+    .attendance-content {       
+        padding: 5% 0 5% 0;
+    }
+    h2 {
+        @include h2style;
+        margin-left: 20px;
+    }
+    p {
+        font-weight: 700;
+        text-align: center;
+        font-size: 14px;
+        margin: 20px;
+    }
+    .attendance-bttitle {
+        margin: 50px 0 0 20px;
+    }
+    span {
+        font-size: 14px;
+        color: #3879b4;
+        
+    }
+    .attendance-img {
+        width: 90%;
+        padding-top: 5%;
+        display: block;
+        margin: auto;
+        img {
+        box-shadow: #ccc 0 0 5px;
+        border: 3px solid #fff;
+        max-width: 100%;                        
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .attendance-main {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 1px;
+        .attendance-hide {
+            display: block;
+            margin: 20px;   
+            text-align: center;
+            font-size: 30px;
+            color: #00407A;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        #attendance-content-bold p {
+            font-size: $fontSize;
+        }
+        .attendance-content p, li, a, span {
+            font-size: $fontSize;
+        }
+        .attendance-img {            
+            width: 100%;
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}

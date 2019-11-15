@@ -1,0 +1,67 @@
+@import '../../../../../styles.scss';
+.halflux-main {
+    @include main;
+    .halflux-pic {
+        width: 40%;
+        img {
+        float: left;
+        box-shadow: #ccc 0 0 5px;
+        border: 3px solid #fff;
+        max-width: 100%;
+        margin: 20px;            
+        }
+    }
+    h5 {
+        color: #00407A;
+        margin-left: 20px;
+        font-weight: 700;
+    }
+    .halflux-title h5 {
+        padding-top: 20px;
+    }
+    p {
+        margin: 20px;
+    }
+    .halflux-tariffe {
+        font: 600 15px OpenSans;
+        text-align: center;
+        span{
+            font-size: 20px;
+            color: #3075b3;
+            margin-left: 18px;
+        }
+        .halflux-tariffe-bloc {
+            width: 210px;
+            float: left;
+            margin-bottom: 10px; 
+        }
+        .halflux-tariffe-bloc-title {
+            color: #003b6e;           
+            margin-bottom: 20px; 
+        }
+        p {
+            font-size: 12px;
+            text-align: left;
+        }
+    }
+    .halflux-inclusive span {
+        text-transform: uppercase;
+    }
+    .halflux-galery {
+        width: 40%;
+        img {
+            box-shadow: #ccc 0 0 5px;
+            border: 3px solid #fff;
+            max-width: 100%;
+            margin: 20px;            
+        }
+    }
+    .halflux-backpage button {
+        width: 150px;
+        height: 30px;
+        margin-left: 20px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7)
+    }
+}

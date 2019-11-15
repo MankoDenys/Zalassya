@@ -1,0 +1,81 @@
+<aside class="aside-grid">
+
+  <form action="URL" method="post" id="reservationForm">
+
+    <div class="sitebar-reservation-ua">
+
+      <div class="wrap-sitebar-pentagon">
+        <div class="sitebar-pentagon">
+          <span class="sitebar-pentagon-tile-1">г о т е л ь</span> <br>
+          <span class="sitebar-pentagon-tile-2">заласся</span>
+          <div class="sitebar-pentagon-line"></div>
+          <div class="sitebar-pentagon-star"></div>
+        </div>
+      </div>
+
+      <div class="sitebar-reservation-title">Забронювати номер</div>
+      <div class="input-flex">
+        <div class="sitebar-reservation-input-bloc">
+          <label class="sitebar-reservation-input-title">Дата заїзду*:</label><br>
+          <input type="text" name="search[arrival]" autocomplete="off" id="date_in" class="sitebar-reservation-input"
+            value="19.08.2019 14:00">
+          <div class="sitebar-reservation-calendar-icon"></div>
+        </div>
+        <div class="sitebar-reservation-input-bloc">
+          <label class="sitebar-reservation-input-title">Дата виїзду*:</label><br>
+          <input type="text" name="search[arrival]" autocomplete="off" id="date_out" class="sitebar-reservation-input"
+            value="20.08.2019 12:00">
+          <div class="sitebar-reservation-calendar-icon"></div>
+        </div>
+        <div class="sitebar-reservation-select-bloc">
+          <label class="sitebar-reservation-input-title">Дорослі*:</label>
+          <div class="sel-wrap">
+            <select name="search[rooms][0][adults]" class="search-adults">
+              <option value="1" selected="selected">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="sitebar-reservation-input-title">
+            * - поля, обов'язкові для заповнення
+          </div>
+        </div>
+        <input type="submit" class="sitebar-reservation-submit" value="Перевірити наявність">
+
+      </div>
+      <div class="sitebar-reservation-phone-bloc">
+        <div class="sitebar-reservation-phone-icon">
+
+        </div>
+        <div class="sitebar-reservation-phone-title">
+          <img src="../assets/img/phone-call.svg" alt="call">
+          Бронювання за телефоном:
+        </div>
+        <div class="sitebar-reservation-phone-number">
+          +38 (095) 270 67 33<br>
+          +38 (044) 494 67 33
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div routerLink="/discount" class="aside-info-stock">
+    <img src="../../../assets/img/snowflakes.jpg" alt="">
+  </div>
+
+  <div class="aside-galery">
+    <h3>Фотогалерея</h3>
+    <a href="#">
+      <img src="../../../assets/img/TjWOypmaIs.jpg" alt="">
+    </a>
+    <a href="#">
+      <img src="../../../assets/img/aside_galery_room.jpg" alt="">
+    </a>
+    <a href="#">
+      <img class="aside-galery-last" src="../../../assets/img/hotel_history.jpg" alt="">
+    </a>
+  </div>
+
+</aside>

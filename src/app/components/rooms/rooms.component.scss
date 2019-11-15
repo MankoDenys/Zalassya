@@ -1,0 +1,223 @@
+@import '../../../styles.scss';
+.room-main {
+    @include main;    
+    h1 {
+        @include h1style;
+    }
+    .room-hide {
+        display: none;
+    }
+    .room-ban {
+        width: 91%;
+        img {
+            margin: 5%;
+            @include img-style;
+        }
+    }
+    .room-info {
+        margin: 0 20px 0 20px;
+    }
+    .room-title {
+        margin: 0 20px 0 20px;
+        text-align: center;
+    }
+    .room-wrap-addInfo {
+        height: 40px;
+        .room-addInfo-hide {
+            display: none;
+        }
+        .room-addInfo {
+            position: relative;
+            width: 40px;
+            float: right;
+            margin-right: 20px;
+            img {
+                width: 40px;
+            }
+        }
+        .room-addInfo-hover {
+            display:none;
+            margin-left:-220px;
+            margin-top:-100px;
+            background:white;
+            text-align: center;
+        }
+        .room-addInfo:hover .room-addInfo-hover {
+            display:block;
+            position:absolute;
+            top:0px;
+            z-index:9999;
+            width:270px;
+            height: 85px;
+            color: #4a5967;
+            text-align: center;
+            border: 1px solid #4a5967;
+            border-radius: 5px;            
+            img {
+                width: 80px;
+                position: absolute;
+                left: 15%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            p {
+                width:190px;
+                position: absolute;
+                left: 63%;
+                top: 50%;
+                transform: translate(-50%, -50%); 
+                text-align: center;
+            }
+            &:before {
+                content: ' '; 
+                position: absolute; 
+                width: 0; 
+                height: 0; 
+                left: 222px; 
+                top: 83px; 
+                border: 9px solid; 
+                border-color: rgb(87, 85, 85) rgb(71, 70, 70) transparent transparent;  
+            }
+            &:after { 
+                content: ' '; 
+                position: absolute; 
+                width: 0; 
+                height: 0; 
+                left: 223px; 
+                top: 83px; 
+                border: 8px solid; 
+                border-color: #fff #fff transparent transparent; 
+            }        
+        }
+    }   
+    .room-list-wrap {
+        @include grid-wrap;
+        .room-list {
+            @include grid-interior;
+        }
+        h2 {
+            @include h2style;
+        }
+        button {
+            @include blue-button;
+            a {
+                @include blue-button-a;
+            }
+        }        
+        span {
+            color: #3879b4;
+            font-size: 22px;
+            b {
+                font-size: 22px;
+            }
+        }
+        sup {
+            font-size: 8px;
+        }
+        .room-pic {
+            width: 100%;           
+            img {
+                @include img-style;
+            }
+        }
+    }
+    .room-list-tariffs {
+        padding-bottom: 25px;
+    }
+    .room-list-tariffs button {
+        width: 350px;
+        height: 30px;
+        background: linear-gradient(0deg, #37678C, #69C7FC);
+        border: none;
+        display: block;
+        margin: auto;
+        a {
+            @include blue-button-a;
+        }
+    }     
+}
+
+@media (max-width: 960px) {
+    .room-main {
+        @include main960;        
+        .room-hide {
+            @include hide;    
+        }
+        .room-info p {
+            font-size: $fontSize;
+            margin: 20px; 
+        }
+        .room-ban {
+            width: 100%;
+            img {
+                display: block;
+                margin: auto;                
+            }            
+        }
+        .room-wrap-addInfo {
+            height: 200px;
+        }        
+        .room-addInfo {
+            display: none;
+        }
+        .room-wrap-addInfo .room-addInfo-hide {
+            display: block;
+            img {
+                max-width: 100%;
+                float: left;  
+                margin: 0 0 0 40px;              
+            }
+            p {
+                font-size: $fontSize;
+                margin: 0 0 20px 0;
+                line-height: 85px;
+            }
+            .room-addInfo-hide-1 {
+                line-height: 42.5px;
+            }
+        }
+        .room-list-wrap {
+            grid-template-columns: repeat(1, 1fr);            
+            .room-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .room-list-title {
+                font-size: $fontSize;
+                h2 {
+                    font-size: $fontSize;
+                    text-align: center;
+                }
+                b {
+                    font-size: $fontSize;
+                }
+                sup {
+                    font-size: 12px;
+                }
+                span {
+                    text-align: center;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .room-pic {
+                width: 100%;
+            }
+            .room-list-button button {
+                width: 100%;
+                height: 50px;
+                margin: 0 auto 40px auto;
+                a {
+                    font-size: $fontSize;
+                }                
+            } 
+        }
+        .room-list-tariffs button {
+            width: 60%;
+            height: 50px;
+            margin: 0 auto 40px auto;
+            a {
+                font-size: $fontSize;
+            }
+        }
+    }      
+}

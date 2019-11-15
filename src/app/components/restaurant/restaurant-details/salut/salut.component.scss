@@ -1,0 +1,39 @@
+@import '../../../../../styles.scss';
+.salut-main {
+    @include main;
+    img {
+        width: 360px;
+        margin: 20px;
+        box-shadow: #ccc 0 0 5px;
+        border: 3px solid #fff;
+        
+    }
+    .salut-ban img {
+        float: left;
+    }
+    h1 {
+        @include h1style;
+        margin-left: 20px;
+    }
+    p {
+        margin: 20px;
+    }
+    p:last-child {
+        font-weight: bold;
+        }
+    ul li {
+            list-style-image: url('../../../../../assets/img/book3.png');
+        }
+    .salut-title h1 {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .salut-backpage button {
+        width: 150px;
+        height: 30px;
+        margin-left: 20px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7);
+    }
+}

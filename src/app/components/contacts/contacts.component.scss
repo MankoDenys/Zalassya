@@ -1,0 +1,179 @@
+@import '../../../styles.scss';
+.contacts-main {
+    width: 57%;
+    height: 100%;
+    margin: 20px 0 0 420px;
+    border-radius: 5px;
+    box-shadow: #777 2px 2px 13px;
+    background: #fff; 
+    .contacts-hide {
+        display: none;
+    }
+    .contacts-wrap {
+        width: 40%;
+        display: inline-block;
+        h1 {
+            @include h1style;
+            margin-left: 20px;
+            padding-top: 40px;
+        }
+    }
+    .contacts-wrap2 {
+        width: 57%;
+        display: inline-block;
+        margin: 0 0 1% 3%;
+        h1 {
+            @include h1style;
+            padding-top: 65px;
+        }
+    }
+    ul li {
+        list-style-image: $mark-book;
+        .contacts-write-mail {
+            color: inherit;
+        }
+    }
+    .map {
+        width: 100%;
+        height: 250px;
+    }
+    agm-map {
+        width: 100%;
+        height: 100%;  
+    }
+    .contacts-feedback-form {
+        width: 100%;
+        margin: 0 3% 3% 0;
+        form {
+            display: block;
+            background: #EEEEEE;
+            padding-top: 2px;
+            border-radius: 5px;
+        }
+        .contacts-feedback-form-line {
+            margin-left: 3%;
+            height: 40px;
+            
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+            &:nth-child(7) {
+                height: 80px;  
+            }
+            &:nth-child(8) {
+                padding-top: 15px;
+            }
+            &:nth-child(9) {
+                padding-top: 15px;
+            }
+            &:nth-child(10) {
+                height: 105px;
+            }
+            .contacts-feedback-form-line-textarea {
+                line-height: 24px;
+                float: left;
+                padding-top: 8%;
+            }
+        }
+        .contacts-feedback-form-line-label {
+            line-height: 24px;
+            float: left;
+        }
+        .contacts-feedback-form-line-radio {
+            float: right;
+            width: 15px;
+            margin-right: 5px;
+        }
+        .contacts-feedback-form-line-radiolabel {
+            float: right;
+            margin-right: 10%;
+        }
+        input {
+            float: right;
+            width: 50%;
+            margin-right: 10%;
+        }
+        select {
+            float: right;
+            width: 50%;
+            margin-right: 10%;
+        }
+        textarea {
+            float: right;
+            width: 50%;
+            height: 80px;
+            margin-right: 10%;
+        }
+        span {
+            color: red;
+        }
+        .contacts-feedback-form-checkbox {
+            float: left;
+            width: 13px;
+            margin-right: 5px;
+        }
+        .contacts-feedback-form-captcha {
+            float: left;
+            width: 30%;
+            height: 40px;
+            background: aquamarine;
+            margin: 0 0 20px 49%;
+            position: relative;
+            .contacts-feedback-form-captcha-img {
+                background: url("../../../assets/img/chronometer.png");
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                left: 105%;
+                top: 7px;
+            }
+        }
+        .contacts-feedback-form-submit {
+            width: 30%;
+            height: 30px;
+            background: linear-gradient(0deg, #37678C, #69C7FC);
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            margin-right: 20%;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .contacts-main {
+        @include main960;
+        .contacts-wrap  {
+            display: block;
+            width: 100%;
+        }
+        .contacts-wrap2 {
+            display: block;
+            width: 100%;
+        }
+        .map {
+            width: 100%;
+            height: 500px;
+        }
+        .contacts-hide {
+            @include hide;
+        }
+        .contacts-feedback-form {
+            width: 450px;
+            display: block;
+            margin: auto;
+        }
+        ul li {
+            font-size: $fontSize;
+            text-align: center;
+            list-style: none;
+        }
+        h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+}

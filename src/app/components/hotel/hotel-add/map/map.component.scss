@@ -1,0 +1,22 @@
+@import '../../../../../styles.scss';
+.map-main {
+    @include main;
+    h1 {
+        text-align: center;
+        color: #003B6E;
+        font-weight: 900;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    span {
+        text-transform: uppercase;
+    }
+    .map-backpage button {
+        width: 150px;
+        height: 30px;
+        margin: 0 0 50px 20px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7)
+    }
+}

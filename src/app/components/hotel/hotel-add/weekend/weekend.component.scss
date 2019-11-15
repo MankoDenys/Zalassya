@@ -1,0 +1,42 @@
+.weekend-main {
+    width: 57%;
+    height: 710px;
+    margin-left: 420px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: #777 2px 2px 13px;
+    background: #fff;
+    .weekend-title {
+        img {
+            box-shadow: #777 2px 2px 13px;
+            width: 360px;
+            float: left;
+            margin: 50px;
+        }
+        h4 {
+            padding-top: 50px;
+            color: #003b6e;
+            text-align: center;
+            font-weight: 600;
+        }
+        h5 {
+            color: #476C00;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 20px;
+            &p:nth-of-type(2) {
+                font-weight: 600;
+            }
+        }
+    }
+    .weekend-backpage button {
+        width: 150px;
+        height: 30px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7);
+        margin-left: 50px;
+    }
+}

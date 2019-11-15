@@ -1,0 +1,55 @@
+@import '../../../../../styles.scss';
+.long-stay-main {
+    width: 57%;
+    height: 700px;
+    margin-left: 420px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: #777 2px 2px 13px;
+    background: #fff;
+    .long-stay-pic {
+        width: 100%;
+        img {
+        float: left;
+        box-shadow: #ccc 0 0 5px;
+        border: 3px solid #fff;
+        max-width: 100%;
+        margin: 20px;                    
+        }
+    }
+    h5 {
+        color: #00407A;
+        font-weight: 700;
+        padding-top: 20px;
+        text-align: center;
+        margin: 0 20px 0 20px;
+        text-transform: uppercase;
+    }
+    p:nth-of-type(1) {
+        color: #126C00;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 20px;
+        margin: 40px;
+    }
+    p:nth-of-type(2) {
+        font-size: 14px;
+        font-weight: 700;
+        color: #00407A;
+        text-align: center;
+        margin: 40px;
+
+    }
+    p:nth-of-type(3) {
+        margin-left: 20px;
+    }
+    .long-stay-backpage button {
+        width: 150px;
+        height: 30px;
+        margin-left: 20px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7)
+    }
+}

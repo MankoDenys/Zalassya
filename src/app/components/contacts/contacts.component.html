@@ -1,0 +1,146 @@
+<div class="contacts-main">
+    <h1 class="contacts-hide">Контакти</h1>
+
+    <div class="contacts-wrap2">
+        <div class="map">
+            <agm-map [latitude]='lat' [longitude]='lng' [zoom]="15">
+                <agm-marker [label]="mySPlist" [latitude]='lat' [longitude]='lng' [iconUrl]="icon"
+                    (mouseOver)="onMouseOver(infoWindow, $event)" (mouseOut)="onMouseOut(infoWindow, $event)">
+                    <agm-info-window #infoWindow>
+                        Готель «Заласся» <br> Краевид на Днiпро
+                    </agm-info-window>
+                </agm-marker>
+            </agm-map>
+        </div>
+
+        <div class="contacts-feedback-form">
+            <div class="contacts-feedback-form-title">
+                <h1>Форма зворотнього звязку</h1>
+            </div>
+            <form action="#" method="post">
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-label">Звернення</div>
+                    <label class="contacts-feedback-form-line-radiolabel" for="form-radio-2">Пані</label>
+                    <input class="contacts-feedback-form-line-radio" type="radio" name="feadback[radio]"
+                        id="form-radio-2" value="Пані">
+                    <label class="contacts-feedback-form-line-radiolabel" for="form-radio-1">Пан</label>
+                    <input class="contacts-feedback-form-line-radio" type="radio" name="feadback[radio]"
+                        id="form-radio-1" value="Пан">
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-label">Ім’я<span>*</span>: </div>
+                    <input type="text" name="feadback[name]">
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-label">Прізвище:</div>
+                    <input type="text" name="feadback[lastName]">
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-label">Е-mail<span>*</span>: </div>
+                    <input type="text" name="feadback[email]">
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-label">Телефон:</div>
+                    <input type="text" name="feadback[phone]">
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-label">Тема<span>*</span>: </div>
+                    <select name="feadback[topic]">
+                        <option value="hotel@zalassya.kiev.ua">Бронювання </option>
+                        <option value="hotel@zalassya.kiev.ua">Проживання в готелі </option>
+                        <option value="sales@zalassya.kiev.ua">Скарги гостей</option>
+                        <option value="restoran@zalassya.kiev.ua">Ресторан</option>
+                        <option value="sales@zalassya.kiev.ua">Конференції та Банкети</option>
+                        <option value="sales@zalassya.kiev.ua">Маркетинг</option>
+                    </select>
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-feedback-form-line-textarea">Текст<span>*</span>: </div>
+                    <textarea name="feadback[text]" maxlength="100" placeholder="Не бiльш 100 символiв..."></textarea>
+                </div>
+                <div class="contacts-feedback-form-line"><span>*</span> - поля, обов'язкові для заповнення</div>
+                <div class="contacts-feedback-form-line">
+                    <input class="contacts-feedback-form-checkbox" type="checkbox" name="feadback[agreement]" value="0">
+                    <label for="checkbox_id">Я приймаю умови
+                        <a routerLink="agreement">угоди</a>
+                    </label>
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <div class="contacts-captcha-wrap">
+                        <div class="contacts-feedback-form-captcha">
+                            <a class="contacts-feedback-form-captcha-img" href="#"></a>
+                        </div>
+
+                    </div>
+
+                    <input type="text" name="feadback[captcha]">
+                </div>
+                <div class="contacts-feedback-form-line">
+                    <input class="contacts-feedback-form-submit" type="submit" value="Надіслати">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="contacts-wrap">
+        <div class="contacts-hotel">
+            <h1>Готель «Заласся»</h1>
+            <ul>
+                <li>Тел. +38 444 494 14 24</li>
+                <li>Факс. +38 444 280 26 04</li>
+                <li><a href="mailto:hotel@zalassya.kiev.ua" class="contacts-write-mail" target="blank">
+                        e-mail: hotel@zalassya.kiev.ua
+                    </a>
+                </li>
+                <li>вул. Івана Сірко, 11-Б, м.Київ, 00001</li>
+            </ul>
+        </div>
+        <div class="contacts-hotel">
+            <h1>Відділ бронювання (цілодобово):</h1>
+            <ul>
+                <li>Тел. +38 444 494 14 24</li>
+                <li>Факс. +38 444 280 26 04</li>
+                <li><a href="mailto:hotel@zalassya.kiev.ua" class="contacts-write-mail" target="blank">
+                        e-mail: hotel@zalassya.kiev.ua
+                    </a>
+                </li>
+                <li>Начальник служби розміщення</li>
+                <li>Тел. +38 444 494 24 24</li>
+                <li><a href="mailto:fdmanager@zalassya.kiev.ua" class="contacts-write-mail" target="blank">
+                        e-mail: fdmanager@zalassya.kiev.ua
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts-hotel">
+            <h1>Відділ продажів та маркетингу:</h1>
+            <ul>
+                <li>Тел. +38 444 494 14 14</li>
+                <li>Факс. +38 444 280 26 14</li>
+                <li><a href="mailto:sales@zalassya.kiev.ua" class="contacts-write-mail" target="blank">
+                        e-mail: sales@zalassya.kiev.ua
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts-hotel">
+            <h1>Конференц обслуговування:</h1>
+            <ul>
+                <li>Тел. +38 444 494 14 34</li>
+                <li>Факс. +38 444 280 26 34</li>
+                <li><a href="mailto:sales@zalassya.kiev.ua" class="contacts-write-mail" target="blank">
+                        e-mail: sales@zalassya.kiev.ua
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts-hotel">
+            <h1>Ресторане обслуговування:</h1>
+            <ul>
+                <li>Тел. +38 444 494 14 54</li>
+                <li>Факс. +38 444 280 26 54</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,100 @@
+<header class="header-grid">
+  <nav id="header-menu">
+    <ul class="header-nav">
+      <li><a routerLink="/hotel">Готель</a></li>
+      <li><a routerLink="/restaurant">Ресторани та бари</a></li>
+      <li><a routerLink="/rooms">Номери</a></li>
+      <li><a routerLink="/attendance">Послуги</a></li>
+      <li><a routerLink="/conference">Конференції та банкети</a></li>
+      <li><a routerLink="/specProposalsotel">Спеціальні пропозиції</a></li>
+      <li><a routerLink="/contacts">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <input id="go" type="checkbox" />
+  <label for="go" class="header-st">
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </label>
+
+  <div class="header-menu">
+    <div class="header-wrap">
+      <ul>
+        <li><a routerLink="/hotel">Готель</a></li>
+        <li><a routerLink="/restaurant">Ресторани та бари</a></li>
+        <li><a routerLink="/rooms">Номери</a></li>
+        <li><a routerLink="/attendance">Послуги</a></li>
+        <li><a routerLink="/conference">Конференції та банкети</a></li>
+        <li><a routerLink="/specProposalsotel">Спеціальні пропозиції</a></li>
+        <li><a routerLink="/contacts">Контакти</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header-logo">
+    <img src="../../../assets/img/logo.jpg" alt="">
+  </div>
+
+  <div class="header-logo-phone">
+    <img (click)=toggleDisplay() src="../../../assets/img/phone_22.jpg" alt="">
+  </div>
+
+  <div [hidden]="isShow" class="header-form">
+    <form action="URL" method="post" id="reservationForm">
+
+      <div class="sitebar-reservation-ua">
+
+        <div class="sitebar-reservation-title">Забронювати номер</div>
+        <div class="input-flex">
+          <div class="sitebar-reservation-input-bloc">
+            <label class="sitebar-reservation-input-title">Дата заїзду*:</label><br>
+            <input type="text" name="search[arrival]" autocomplete="off" id="date_in" class="sitebar-reservation-input"
+              value="19.08.2019 14:00">
+            <div class="sitebar-reservation-calendar-icon"></div>
+          </div>
+          <div class="sitebar-reservation-input-bloc">
+            <label class="sitebar-reservation-input-title">Дата виїзду*:</label><br>
+            <input type="text" name="search[arrival]" autocomplete="off" id="date_out" class="sitebar-reservation-input"
+              value="20.08.2019 12:00">
+            <div class="sitebar-reservation-calendar-icon"></div>
+          </div>
+          <div class="sitebar-reservation-select-bloc">
+            <label class="sitebar-reservation-input-title">Дорослі*:</label>
+            <div class="sel-wrap">
+              <select name="search[rooms][0][adults]" class="search-adults">
+                <option value="1" selected="selected">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="sitebar-reservation-submit">
+            <input type="submit" value="Перевірити наявність">
+          </div>
+
+          <div class="sitebar-reservation-input-title">
+            * - поля, обов'язкові для заповнення
+          </div>
+
+        </div>
+        <div class="sitebar-reservation-phone-bloc">
+
+          <div class="sitebar-reservation-phone-title">
+            Бронювання за телефоном:
+          </div>
+          <div class="sitebar-reservation-phone-number">
+            +38 (095) 270 67 33<br>
+            +38 (044) 494 67 33
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</header>

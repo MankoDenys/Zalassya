@@ -1,0 +1,45 @@
+@import '../../../../../styles.scss';
+.tariffs-main {
+    @include main;
+    h1 {
+        color: #00407A;
+        text-align: center;
+        margin-left: 20px;
+        font-weight: 800;
+        padding-top: 20px;
+        font-size: fontSize;
+    }
+    h5 {
+        color: #00407A;
+        margin-left: 20px;
+        font-weight: 800;
+    }
+    p {
+        margin: 20px;
+    }
+    table, th, tr, td {
+        border: 1px solid black;
+        text-align: center;
+        th {
+            color: #5879B4;
+        }
+        
+    }
+    .tariffs-table {
+        margin: 20px;
+    }
+    .tariffs-table-bold {
+        font-weight: 700;
+    }
+    .tariffs-table-pat  {
+        table {
+            margin: 0 auto;
+        }
+        h5 {
+            text-align: center; 
+        }
+        p {
+            margin-left: 160px;
+        } 
+    }
+}

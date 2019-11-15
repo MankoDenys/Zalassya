@@ -1,0 +1,44 @@
+.discount-main {
+    width: 57%;
+    height: 710px;
+    margin-left: 420px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: #777 2px 2px 13px;
+    background: #fff;
+    .discount-title {
+        img {
+            box-shadow: #777 2px 2px 13px;
+            width: 360px;
+            float: left;
+            margin: 50px;
+        }
+        p:nth-of-type(1) {
+            color: #00407A;
+            font-size: 18px;
+            font-weight: 700;
+            padding-top: 50px;
+            text-align: center;
+            margin-right: 50px;
+        }
+        p:nth-of-type(2) {
+            font-size: 15px;
+            text-align: center;
+            color: #126C00;
+            font-weight: 600;
+            margin: 50px;
+            padding-bottom: 20px;
+        }
+        p:nth-of-type(n+3) {
+            margin-left: 50px;
+        }
+    }
+    .discount-backpage button {
+        width: 150px;
+        height: 30px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7);
+        margin: 0 50px 50px 50px;
+    }
+}

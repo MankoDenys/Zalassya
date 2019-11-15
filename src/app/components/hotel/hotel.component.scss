@@ -1,0 +1,104 @@
+@import '../../../styles.scss';
+.hotel-main {
+    width: 62%;
+    height: 100%;
+    margin: 20px 0 0 420px;
+    background: #fff;
+    border-radius: 5px;
+    .container-fluid img {
+        border-radius: 5px;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .hotel-wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+        grid-gap: 1vw;
+        justify-items: center;
+        margin: 40px 0 0 0;
+        h1 {
+            font-size: 28px;
+            color: #00407A;
+            font-weight: 700;
+            text-align: center;
+        }
+        .hotel-info {
+            margin: 0 0 50px 30px;
+            background: #fff;
+            & p:first-of-type {
+                font-weight: bold;
+                font-size: 14px;
+            }
+            a.hotel-text:active,
+            a.hotel-text:hover,
+            a.hotel-text {
+                text-decoration: none;
+                color: #728ECE;
+                font-size: 18px;                
+            }
+        }
+        .hotel-info-stock {
+            width: 70%;    
+            span {
+                font-size: 16px;
+                color: #476C00;
+                font-weight: bold;
+            }
+            p {
+                font-weight: bold;
+            }
+            .hotel-info-stock-weekend {
+                text-transform: uppercase
+            }
+            .hotel-info-stock-title {
+                display: grid;
+                grid-template-columns: 20% 80%;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                box-shadow: #777 2px 2px 7px;
+                background: #fff;
+                cursor: pointer;
+                text-align: center;    
+                .hotel-wrap-img {
+                    margin: 5px;
+                    img {
+                        max-width: 100%;
+                        transform: scale(1,1);
+                        transition-timing-function: ease-out;
+                        transition-duration: 550ms;
+                        &:hover {
+                            transform: scale(1.5,1.5);
+                            transition-timing-function: ease-out;
+                            transition-duration: 700ms;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .hotel-main {
+        @include main960;
+        .hotel-wrap {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        p {
+            font-size: $fontSize;
+        }
+        .hotel-info h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        .hotel-text {
+            font-size: $fontSize;
+            img {
+                zoom: 2;
+            }
+        }
+        span {
+            font-size: $fontSize;
+        }      
+    }
+}

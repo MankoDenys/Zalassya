@@ -1,0 +1,55 @@
+@import '../../../../../styles.scss';
+.zalet-main {
+    @include main;
+    .zalet-pic {
+        width: 40%;
+        img {
+        float: left;
+        box-shadow: #ccc 0 0 5px;
+        border: 3px solid #fff;
+        max-width: 100%;
+        margin: 20px;            
+        }
+    }
+    h5 {
+        color: #00407A;
+        font-weight: 700;
+        margin-left: 20px;
+        padding-top: 20px;
+        &:nth-of-type(2) {
+            margin-top: 30px;
+        }
+    }
+    h3 {
+        color: #3075B5;
+        margin-left: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .zalet-rate {
+        padding-top: 20px;
+    }
+    p, .zalet-rent {
+        margin: 0 20px 20px 20px;
+    }
+    ul li {
+            list-style-image: url('../../../../../assets/img/book3.png')
+        }
+    .zalet-fotogelery {
+        width: 40%;
+        img {
+            box-shadow: #ccc 0 0 5px;
+            border: 3px solid #fff;
+            max-width: 100%;
+            margin: 20px;            
+        }
+    }
+    .zalet-backpage button {
+        width: 150px;
+        height: 30px;
+        margin-left: 20px;
+        color: azure;
+        font-size: 18px;
+        background: linear-gradient(0deg, #888888, #F7F7F7)
+    }
+}
+
