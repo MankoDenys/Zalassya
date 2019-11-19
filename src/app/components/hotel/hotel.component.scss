@@ -25,12 +25,10 @@
         .hotel-info {
             margin: 0 0 50px 30px;
             background: #fff;
-            & p:first-of-type {
+            .hotel-info-1 {
                 font-weight: bold;
                 font-size: 14px;
             }
-            a.hotel-text:active,
-            a.hotel-text:hover,
             a.hotel-text {
                 text-decoration: none;
                 color: #728ECE;
@@ -85,11 +83,7 @@
             grid-template-columns: repeat(1, 1fr);
         }
         p {
-            font-size: $fontSize;
-        }
-        .hotel-info h1 {
-            font-size: 30px;
-            text-align: center;
+            font-size: $fontSize; 
         }
         .hotel-text {
             font-size: $fontSize;
@@ -99,6 +93,15 @@
         }
         span {
             font-size: $fontSize;
-        }      
+        }   
+        .hotel-info {
+            #mobile {
+                font-size: $fontSize;
+            }
+            h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+        }         
     }
 }
