@@ -98,12 +98,9 @@
         h2 {
             @include h2style;
         }
-        button {
-            @include blue-button;
-            a {
-                @include blue-button-a;
-            }
-        }        
+        a {
+            @include blue-button-a;
+        }   
         span {
             color: #3879b4;
             font-size: 22px;
@@ -124,16 +121,10 @@
     .room-list-tariffs {
         padding-bottom: 25px;
     }
-    .room-list-tariffs button {
-        width: 350px;
-        height: 30px;
-        background: linear-gradient(0deg, #37678C, #69C7FC);
-        border: none;
-        display: block;
+    .room-list-tariffs a {
+        width: 350px !important;
+        @include blue-button-a;
         margin: auto;
-        a {
-            @include blue-button-a;
-        }
     }     
 }
 
@@ -162,10 +153,11 @@
         }
         .room-wrap-addInfo .room-addInfo-hide {
             display: block;
+            margin-bottom: 20px;
             img {
                 max-width: 100%;
                 float: left;  
-                margin: 0 0 0 40px;              
+                margin: 0 0 0 40px;                             
             }
             p {
                 font-size: $fontSize;
@@ -174,6 +166,15 @@
             }
             .room-addInfo-hide-1 {
                 line-height: 42.5px;
+                text-align: center;
+            }
+        }
+        #room-title {
+            clear: both;
+            margin: 0 20px 20px 20px;
+            padding-top: 20px;
+            h1 {
+                font-size: $fontSize;                
             }
         }
         .room-list-wrap {
@@ -202,22 +203,19 @@
             .room-pic {
                 width: 100%;
             }
-            .room-list-button button {
+            .room-list-button a {
                 width: 100%;
                 height: 50px;
                 margin: 0 auto 40px auto;
-                a {
-                    font-size: $fontSize;
-                }                
+                font-size: $fontSize;
+                padding-top: 10px;               
             } 
         }
-        .room-list-tariffs button {
+        .room-list-tariffs a {
             width: 60%;
-            height: 50px;
+            height: 65px;
             margin: 0 auto 40px auto;
-            a {
-                font-size: $fontSize;
-            }
+            font-size: $fontSize;
         }
     }      
 }

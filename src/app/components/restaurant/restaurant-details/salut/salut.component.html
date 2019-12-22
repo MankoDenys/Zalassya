@@ -1,7 +1,7 @@
 <div class="salut-main">
 
     <div class="salut-ban">
-        <img src="https://picua.org/images/2019/08/03/0bd9c1e4c498890835a7458cd970caa0.jpg" alt="">
+        <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
     </div>
     <div class="salut-title">
         <h1>Pесторан "Залибоба"</h1>
@@ -34,9 +34,48 @@
     </div>
     <div class="salut-fotogelery">
         <h1>Фотогалерея:</h1>
-        <a href="#"><img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt=""> </a>
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/08/03/0bd9c1e4c498890835a7458cd970caa0.jpg"
+            alt="">
+        <div [hidden]="isShow" class="black-window">
+            <img class="modal-close" (click)=toggleDisplay()
+                src="https://picua.org/images/2019/12/08/93abd84ecdd3cf125f4703643f6eab46.png" alt="">
+
+            <div class="slider">
+
+                <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                <label id="first-pic" for="id1">
+                    <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id2" />
+                <label for="id2">
+                    <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id3" />
+                <label for="id3">
+                    <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id4" />
+                <label for="id4">
+                    <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id5" />
+                <label class="last-pic" for="id5">
+                    <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div class="salut-backpage">
         <button (click)="goBack()">повернутися</button>
     </div>
+    <div class="salut-gapline"></div>
 </div>

@@ -1,7 +1,7 @@
 <div class="zalet-main">
-    <div class="zalet-ban">
-        <div class="zalet-pic">
-            <img src="https://picua.org/images/2019/11/16/e55264ae485e381220a4b778b7b50e91.jpg" alt="">
+    <div class="zalet-pic-rate">
+        <div class="zalet-ban">
+            <img src="https://picua.org/images/2019/11/18/fd065c4211745484dc22b9ed34ea2d8b.jpg" alt="">
         </div>
 
         <div class="zalet-rate">
@@ -25,7 +25,7 @@
         <p>Для учасників заходів у конференц-залі надаються послуги банкетного обслуговування: кава-брейк, фуршет,
             прийом з комплексним меню.</p>
         <h5>Оренда залу:</h5>
-        <a href="../../../../../assets/img/Конференц-зал укр(1).docx" class="zalet-rent">Вартість оренди</a>
+        <a href="https://github.com/MankoDenys/Zalassya/tree/master/src/assets/img/Price.docx" class="zalet-rent" target="blank">Вартість оренди</a>
     </div>
 
     <div class="zalet-contacts">
@@ -41,9 +41,49 @@
     </div>
     <div class="zalet-fotogelery">
         <h5>Фотогалерея:</h5>
-        <a href="#"><img src="https://picua.org/images/2019/11/18/fd065c4211745484dc22b9ed34ea2d8b.jpg" alt=""></a>
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/11/16/e55264ae485e381220a4b778b7b50e91.jpg"
+            alt="">
+
+        <div [hidden]="isShow" class="black-window">
+            <img class="modal-close" (click)=toggleDisplay()
+                src="https://picua.org/images/2019/12/08/93abd84ecdd3cf125f4703643f6eab46.png" alt="">
+
+            <div class="slider">
+
+                <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                <label id="first-pic" for="id1">
+                    <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id2" />
+                <label for="id2">
+                    <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id3" />
+                <label for="id3">
+                    <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id4" />
+                <label for="id4">
+                    <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id5" />
+                <label class="last-pic" for="id5">
+                    <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div class="zalet-backpage">
         <button (click)="goBack()">повернутися</button>
     </div>
+    <div class="zalet-gapline"></div>
 </div>

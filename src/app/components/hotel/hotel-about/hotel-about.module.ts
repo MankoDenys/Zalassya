@@ -5,6 +5,7 @@ import { DiscountComponent } from '../hotel-add/discount/discount.component';
 import { WeekendComponent } from '../hotel-add/weekend/weekend.component';
 import { TourComponent } from '../hotel-add/tour/tour.component';
 import { MapComponent } from '../hotel-add/map/map.component';
+import { AgreementComponent } from '../hotel-add/agreement/agreement.component';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'add', component: HotelAddComponent },
   { path: 'weekend', component: WeekendComponent },
   { path: 'tour', component: TourComponent },
-  { path: 'map', component: MapComponent }
+  { path: 'map', component: MapComponent },
+  { path: 'agreement', component: AgreementComponent }
 ];
 
 @NgModule({
@@ -22,7 +24,7 @@ const routes: Routes = [
                  WeekendComponent,
                  TourComponent,
                  MapComponent,
-                
+                 AgreementComponent
                 ],
   imports: [
     CommonModule,

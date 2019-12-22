@@ -1,13 +1,45 @@
+@import '../../../../../styles.scss';
 .agreement-main {
     width: 57%;
-    height: 100%;
-    margin-left: 420px;
-    margin-top: 20px;
+    height: 750px;
+    margin: 20px 0 0 420px;
     border-radius: 5px;
     box-shadow: #777 2px 2px 13px;
     background: #fff;
-    h5 {
+    h2 {
         text-align: center;
         color: #003B6E;
+        font-weight: 800;
+    }
+    .agreement-title {
+        margin: 20px;
+        padding-top: 20px;
+    }
+    li {
+        margin-right: 20px;
+    }
+    .agreement-backpage button {
+        @include backpage;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (max-width: 960px) {
+    .agreement-main {
+        @include main960;
+        height: 100%;
+        h2 {
+            font-size: 28px;
+        }
+        p, li, a {
+            font-size: $fontSize;            
+        }
+        .agreement-backpage {
+            padding-bottom: 1px;
+            button {
+                @include backpage_960;                            
+            }
+        }        
     }
 }

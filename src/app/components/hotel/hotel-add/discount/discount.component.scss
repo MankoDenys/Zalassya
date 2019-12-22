@@ -1,3 +1,4 @@
+@import '../../../../../styles.scss';
 .discount-main {
     width: 57%;
     height: 710px;
@@ -6,13 +7,16 @@
     border-radius: 5px;
     box-shadow: #777 2px 2px 13px;
     background: #fff;
-    .discount-title {
+    .discount-ban {
+        width: 40%;
         img {
             box-shadow: #777 2px 2px 13px;
-            width: 360px;
+            max-width: 100%;
             float: left;
             margin: 50px;
         }
+    }
+    .discount-title {                
         p:nth-of-type(1) {
             color: #00407A;
             font-size: 18px;
@@ -34,11 +38,32 @@
         }
     }
     .discount-backpage button {
-        width: 150px;
-        height: 30px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7);
+        @include backpage;
         margin: 0 50px 50px 50px;
+    }
+    .discount-gapline {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 960px) {
+    .discount-main {
+        @include main960;
+        height: 100%;
+        .discount-ban {
+            width: 80%;
+            margin: auto; 
+            img {
+                float: none;
+                margin: 40px 0 0 0;                
+            }
+        }
+        .discount-title > #discount-title-mobile, p {
+            font-size: $fontSize;
+                margin: 0;
+        }
+        .discount-backpage button {
+            @include backpage_960;                             
+        }
     }
 }

@@ -19,7 +19,6 @@ import { RoomsDetailsModule } from "./components/rooms/rooms-details/rooms-detai
 import { ConferenceDetailsModule } from "./components/conference/conference-details/conference-details.module";
 import { SpecialOffersDetailsModule } from "./components/spec-proposals/special-offers-details/special-offers-details.module";
 import { AgmCoreModule } from "@agm/core";
-import { AgreementComponent } from './components/hotel/hotel-add/agreement/agreement.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AsideComponent } from './components/aside/aside.component';
@@ -36,11 +35,9 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     AttendanceComponent,
     SpecProposalsComponent,
     ContactsComponent,
-    AgreementComponent,
     HeaderComponent,
     FooterComponent,
-    AsideComponent
-    
+    AsideComponent    
   ],
   imports: [
     BrowserModule,

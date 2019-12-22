@@ -23,8 +23,9 @@
             <div><span>3180 </span> грн.</div>
             <div><span>3420 </span> грн.</div>
         </div>
-        <p>Ціна вказана за номер на добу.</p>
+
     </div>
+    <p class="halflux-mobile">Ціна вказана за номер на добу.</p>
     <div class="halflux-inclusive">
         <p>В номері може бути розміщено від одного до трьох осіб.<br>Кількість номерів - 1</p>
         <h5>В номері:</h5>
@@ -43,9 +44,48 @@
     </div>
     <div class="halflux-galery">
         <h5>Фотогалерея:</h5>
-        <img src="https://picua.org/images/2019/11/16/46b7d417d76b58776c03111b3a5d253b.jpg" alt="">
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/11/16/46b7d417d76b58776c03111b3a5d253b.jpg"
+            alt="">
+        <div [hidden]="isShow" class="black-window">
+            <img class="modal-close" (click)=toggleDisplay()
+                src="https://picua.org/images/2019/12/08/93abd84ecdd3cf125f4703643f6eab46.png" alt="">
+
+            <div class="slider">
+
+                <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                <label id="first-pic" for="id1">
+                    <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id2" />
+                <label for="id2">
+                    <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id3" />
+                <label for="id3">
+                    <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id4" />
+                <label for="id4">
+                    <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id5" />
+                <label class="last-pic" for="id5">
+                    <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div class="halflux-backpage">
         <button (click)="goBack()">повернутися</button>
     </div>
+    <div class="halflux-gapline"></div>
 </div>

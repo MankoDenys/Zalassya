@@ -1,7 +1,7 @@
 <div class="superior-main">
     <div class="superior-title">
         <div class="superior-pic">
-            <img src="https://picua.org/images/2019/11/16/f5c64624df37701f654fcc647753d0a9.png" alt="">
+            <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
         </div>
 
         <h5>Стандарт покращений</h5>
@@ -23,8 +23,9 @@
             <div><span>2980 </span> грн.</div>
 
         </div>
-        <p>Ціна вказана за номер на добу.</p>
+
     </div>
+    <p class="superior-mobile">Ціна вказана за номер на добу.</p>
     <div class="superior-inclusive">
         <p>Інтер’єр номерів може бути різним<br>Кількість номерів - 48</p>
         <h5>В номері:</h5>
@@ -44,9 +45,47 @@
     </div>
     <div class="superior-galery">
         <h5>Фотогалерея:</h5>
-        <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/11/16/f5c64624df37701f654fcc647753d0a9.png" alt="">
+        <div [hidden]="isShow" class="black-window">
+            <img class="modal-close" (click)=toggleDisplay()
+                src="https://picua.org/images/2019/12/08/93abd84ecdd3cf125f4703643f6eab46.png" alt="">
+
+            <div class="slider">
+
+                <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                <label id="first-pic" for="id1">
+                    <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id2" />
+                <label for="id2">
+                    <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id3" />
+                <label for="id3">
+                    <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id4" />
+                <label for="id4">
+                    <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id5" />
+                <label class="last-pic" for="id5">
+                    <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div class="superior-backpage">
         <button (click)="goBack()">повернутися</button>
     </div>
+    <div class="superior-gapline"></div>
 </div>

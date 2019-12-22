@@ -1,3 +1,4 @@
+@import '../../../../../styles.scss';
 .weekend-main {
     width: 57%;
     height: 710px;
@@ -7,11 +8,14 @@
     box-shadow: #777 2px 2px 13px;
     background: #fff;
     .weekend-title {
-        img {
-            box-shadow: #777 2px 2px 13px;
-            width: 360px;
-            float: left;
-            margin: 50px;
+        .weekend-ban {
+            width: 40%;
+            img {
+                box-shadow: #777 2px 2px 13px;
+                max-width: 100%;
+                float: left;
+                margin: 50px;
+            }
         }
         h4 {
             padding-top: 50px;
@@ -32,11 +36,34 @@
         }
     }
     .weekend-backpage button {
-        width: 150px;
-        height: 30px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7);
+        @include backpage;
         margin-left: 50px;
+    }
+    .weekend-gapline {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 960px) {
+    .weekend-main {
+        @include main960;
+        height: 100%;        
+        .weekend-title {
+            .weekend-ban {
+                width: 80%;
+                margin: auto; 
+                img {
+                    float: none;
+                    margin: 40px 0 0 0;                
+                }
+            }
+            h5, h4, p {
+                font-size: $fontSize;
+                margin: 0 40px 20px 40px;
+            }
+        }
+        .weekend-backpage button {
+            @include backpage_960;                            
+        }
     }
 }

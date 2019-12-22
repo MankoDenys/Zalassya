@@ -12,11 +12,25 @@
         text-transform: uppercase;
     }
     .map-backpage button {
-        width: 150px;
-        height: 30px;
-        margin: 0 0 50px 20px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7)
+        @include backpage;
+    }
+    .map-gapline {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 960px) {
+    .map-main {
+        @include main960;
+        height: 100%;
+        h1 {
+            font-size: 28px;
+        }
+        .map-line span, a {
+            font-size: $fontSize;            
+        }
+        .map-backpage button {
+            @include backpage_960;                            
+        }
     }
 }

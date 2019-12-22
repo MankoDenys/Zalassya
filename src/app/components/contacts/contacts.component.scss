@@ -165,13 +165,19 @@
             width: 450px;
             display: block;
             margin: auto;
+            // h1 {
+
+            // }
+            #agreement {
+                font-size: inherit;
+            }
         }
-        ul li {
+        .contacts-hotel ul li, a {
             font-size: $fontSize;
             text-align: center;
             list-style: none;
         }
-        h1 {
+        .contacts-hotel h1, .contacts-feedback-form-title h1 {
             font-size: 28px;
             text-align: center;
         }

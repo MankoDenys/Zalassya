@@ -47,7 +47,7 @@
           <span>10% знижки</span><br>
           <p>при бронюваннi через сайт готелю</p>
         </div>
-        
+
       </div>
       <div routerLink="/weekend" class="hotel-info-stock-title">
         <div class="hotel-wrap-img">
@@ -57,7 +57,7 @@
           <span>Літній </span> <span class="hotel-info-stock-weekend">week-end</span><br>
           <p>Три доби по ціні двох!!!</p>
         </div>
-        
+
       </div>
       <div routerLink="/tour" class="hotel-info-stock-title">
         <div class="hotel-wrap-img">
@@ -67,8 +67,58 @@
           <span>Екскурсії</span> <br>
           <p>в Чорнобильську зону</p>
         </div>
-        
+
       </div>
+
+      <div class="hotel-galery">
+        <h3>Фотогалерея</h3>
+
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/11/16/2f00890dc0edd6483477dd06896843a6.jpg"
+          alt="">
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/11/16/daa0df349bc5cc0718c0864c1921df58.jpg"
+          alt="">
+        <img (click)=toggleDisplay() class="hotel-galery-last"
+          src="https://picua.org/images/2019/11/16/fee245f18aad5a89274b0d36654f6984.jpg" alt="">
+
+        <div [hidden]="isShow" class="black-window">
+          <img class="modal-close" (click)=toggleDisplay()
+            src="https://picua.org/images/2019/12/08/93abd84ecdd3cf125f4703643f6eab46.png" alt="">
+
+          <div class="slider">
+
+            <input type="radio" name="slide_switch" id="id1" checked="checked" />
+            <label id="first-pic" for="id1">
+              <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+            </label>
+            <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+
+            <input type="radio" name="slide_switch" id="id2" />
+            <label for="id2">
+              <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+            </label>
+            <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+
+            <input type="radio" name="slide_switch" id="id3" />
+            <label for="id3">
+              <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+            </label>
+            <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+
+            <input type="radio" name="slide_switch" id="id4" />
+            <label for="id4">
+              <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+            </label>
+            <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+
+            <input type="radio" name="slide_switch" id="id5" />
+            <label class="last-pic" for="id5">
+              <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+            </label>
+            <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

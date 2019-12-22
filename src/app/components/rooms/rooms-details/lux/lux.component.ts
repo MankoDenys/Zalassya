@@ -9,6 +9,12 @@ import { Location } from '@angular/common';
 })
 export class LuxComponent implements OnInit {
 
+  isShow = true;  
+
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
+
   constructor(private location: Location) { }
 
   ngOnInit() {

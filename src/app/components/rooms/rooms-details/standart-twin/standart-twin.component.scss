@@ -5,10 +5,7 @@
         width: 40%;
         img {
         float: left;
-        box-shadow: #ccc 0 0 5px;
-        border: 3px solid #fff;
-        max-width: 100%;
-        margin: 20px;            
+        @include img-interior;           
         }
     }
     h5 {
@@ -18,22 +15,19 @@
     }
     .standart-twin-title h5 {
         padding-top: 20px;
+        margin-bottom: 80px;
     }
     p {
         margin: 20px;
     }
     .standart-twin-tariffe {
         font: 600 15px OpenSans;
-        text-align: center;
+        @include grid-interior;
+        margin-top: 90px;
         span{
             font-size: 20px;
             color: #3075b3;
             margin-left: 18px;
-        }
-        .standart-twin-tariffe-bloc {
-            width: 210px;
-            float: left;
-            margin-bottom: 10px; 
         }
         .standart-twin-tariffe-bloc-title {
             color: #003b6e;
@@ -51,18 +45,121 @@
     .standart-twin-galery {
         width: 40%;
         img {
-            box-shadow: #ccc 0 0 5px;
-            border: 3px solid #fff;
-            max-width: 100%;
-            margin: 20px;            
+            @include img-interior;            
+            cursor: pointer;         
         }
+        .black-window {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2;
+        }
+        .modal-close {
+            margin: 0;
+            border: none;
+            box-shadow: none;
+            position: fixed;
+            right: 0;
+            z-index: 3;
+            cursor: pointer;
+        }
+      .slider {
+          width: 100%;
+          position: relative;
+          padding-top: 40%;
+          margin: 0 auto;
+          img {
+            margin: 0;
+            border: none;
+            box-shadow: none;
+          }
+      }
+      .slider>img{        
+          position: absolute;
+          left: 50%; 
+          margin-left: -30%;
+          top: 0;
+          transition: all 0.5s;
+          width: 60%;
+      }
+      .slider input[name='slide_switch'] {
+          display: none;
+      }
+      .slider label {
+          margin-top: 15px;
+          margin-right: 4.4%;
+          border: 3px solid #999;
+          float: left;
+          cursor: pointer;
+          transition: all 0.5s;
+          opacity: 0.6;
+      }
+      label#first-pic {
+          margin-left: 20%;
+      }
+      .slider label img{
+          display: block;
+          width: 8vw;
+      }
+      .slider input[name='slide_switch']:checked+label {
+          border-color: #666;
+          opacity: 1;
+      }
+      .slider input[name='slide_switch'] ~ img {
+          opacity: 0;
+          transform: scale(1.1);
+      }
+      .slider input[name='slide_switch']:checked+label+img {
+          opacity: 1;
+          transform: scale(1);
+      }
     }
     .standart-twin-backpage button {
-        width: 150px;
-        height: 30px;
-        margin-left: 20px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7)
+        @include backpage;
+    }
+    .standart-twin-gapline {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 960px) {
+    .standart-twin-main {
+        @include main960;
+        .standart-twin-pic {
+            width: 80%;
+            margin: auto; 
+            img {
+                float: none;
+                display: block;
+                margin: 40px auto 0;     
+            }
+        }
+        .standart-twin-title {
+            h5, p {
+                font-size: $fontSize;
+                text-align: center;
+            }
+        }        
+        .standart-twin-inclusive,
+        .standart-twin-galery {            
+            h5, p, li, span {
+                font-size: $fontSize;
+            }
+        }
+        .standart-twin-tariffe > .standart-twin-tariffe-bloc {
+            div {
+                font-size: $fontSize;
+            }            
+        }
+        .standart-twin-mobile {
+            font-size: $fontSize;
+        }
+        .standart-twin-backpage button {
+            @include backpage_960;                            
+        }
     }
 }

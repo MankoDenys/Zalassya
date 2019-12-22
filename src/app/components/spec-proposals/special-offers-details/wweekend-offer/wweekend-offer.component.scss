@@ -11,10 +11,7 @@
         width: 100%;
         img {
         float: left;
-        box-shadow: #ccc 0 0 5px;
-        border: 3px solid #fff;
-        max-width: 100%;
-        margin: 20px;                    
+        @include img-interior;                    
         }
     }
     h5 {
@@ -44,11 +41,32 @@
         margin-left: 20px;
     }
     .weekend-offer-backpage button {
-        width: 150px;
-        height: 30px;
-        margin-left: 20px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7)
+        @include backpage;
+    }
+}
+
+@media (max-width: 960px) {
+    .weekend-offer-main {
+        @include main960;
+        height: 100%;
+        .weekend-pic {
+            img {
+            float: none;
+            display: block;
+            margin: 40px auto 0;                            
+            }
+        }
+        p, h5, span, #weekend-mobile  {
+            font-size: $fontSize;
+            span {
+                font-size: $fontSize;
+            }
+        }
+        .weekend-offer-backpage {
+            padding-bottom: 1px;
+            button {
+                @include backpage_960;                            
+            }
+        } 
     }
 }

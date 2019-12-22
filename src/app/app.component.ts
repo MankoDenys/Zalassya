@@ -10,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  onActivate(event) {
+    window.scroll(0,0);
+}
 
   constructor() {
   }

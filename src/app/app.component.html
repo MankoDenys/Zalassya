@@ -1,9 +1,8 @@
-
-    <app-header></app-header>
-    <app-aside></app-aside>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+<app-header></app-header>
+<app-aside></app-aside>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
+<app-footer></app-footer>
 
 <span ngxScrollTop class="scrolltop">
-<img src="https://picua.org/images/2019/11/16/ed2227bf5d51ed4f10332d40e3dea1fb.png" alt="">
+    <img src="https://picua.org/images/2019/11/16/ed2227bf5d51ed4f10332d40e3dea1fb.png" alt="">
 </span>

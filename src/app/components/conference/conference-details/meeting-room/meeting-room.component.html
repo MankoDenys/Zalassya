@@ -1,10 +1,10 @@
 <div class="meeting-room-main">
     <div class="meeting-room-ban">
-        <img src="https://picua.org/images/2019/11/16/3393a388239a4899e68c96869dd7fc48.jpg" alt="">
+        <img src="https://picua.org/images/2019/11/18/5484afc18e40a125bc6982b22f9124c2.jpg" alt="">
     </div>
 
     <div class="meeting-room-title">
-        <h5>Переговорна кімната</h5>
+        <h2>Переговорна кімната</h2>
         <p>Кімната для переговорів розрахована на 14 місць <br>(загальна площа 34 кв.м)</p>
         <p>У Вас є унікальна можливість поспілкуватися з Вашими колегами і діловими партнерами в камерній обстановці.
             Зручне розташування меблів за типом "круглий стіл", пастельні тони інтер'єру неодмінно налаштують на
@@ -12,7 +12,7 @@
         <p>Кімната для переговорів обладнана кондиціонером, мультимедійним проектором, фліпчартом.</p>
     </div>
     <div class="meeting-room-contacts">
-        <h5>Наші контакти:</h5>
+        <h2>Наші контакти:</h2>
         <ul>
             <li>Teл: +38 444 644 85 54</li>
             <li>вул. Івана Сірко, 11-Б, Київ, 00001, Україна</li>
@@ -23,10 +23,50 @@
         </ul>
     </div>
     <div class="meeting-room-fotogelery">
-        <h5>Фотогалерея:</h5>
-        <a href="#"><img src="https://picua.org/images/2019/11/18/5484afc18e40a125bc6982b22f9124c2.jpg" alt=""></a>
+        <h2>Фотогалерея:</h2>
+        <img (click)=toggleDisplay() src="https://picua.org/images/2019/11/16/3393a388239a4899e68c96869dd7fc48.jpg"
+            alt="">
+
+        <div [hidden]="isShow" class="black-window">
+            <img class="modal-close" (click)=toggleDisplay()
+                src="https://picua.org/images/2019/12/08/93abd84ecdd3cf125f4703643f6eab46.png" alt="">
+
+            <div class="slider">
+
+                <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                <label id="first-pic" for="id1">
+                    <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/9bc98e6ac829e06dfc140fabf4f75f5c.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id2" />
+                <label for="id2">
+                    <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/12/08/75eb0cd248dd1ba047ca0bbaaaba5680.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id3" />
+                <label for="id3">
+                    <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/346709710009b840a575d65bb822b890.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id4" />
+                <label for="id4">
+                    <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/143b94c676e8e53a10fea71169afe43f.jpg" alt="">
+
+                <input type="radio" name="slide_switch" id="id5" />
+                <label class="last-pic" for="id5">
+                    <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+                </label>
+                <img src="https://picua.org/images/2019/11/18/cc16d0c3c078f7048f9843dda8614742.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div class="meeting-room-backpage">
         <button (click)="goBack()">повернутися</button>
     </div>
+    <div class="meeting-room-gapline"></div>
 </div>

@@ -11,14 +11,11 @@
         width: 100%;
         padding-top: 50px;
         img {
-        box-shadow: #ccc 0 0 5px;
-        border: 3px solid #fff;
-        max-width: 100%;
-        margin: auto; 
-        display: block;                   
+            @include img-interior;
+            margin: auto; 
+            display: block;                   
         }
     }
-  
     p:nth-of-type(1) {
         color: #126C00;
         font-size: 14px;
@@ -39,14 +36,25 @@
     ul li {
         font-size: 14px;
         margin: 0 20px 15px 20px;
-        list-style-image: url('../../../../../assets/img/cake-slice.png');
+        list-style-image: url('https://picua.org/images/2019/11/28/4c5d283f41593ea2fe990fed96a29c04.png');
     }
     .birthday-tariff-backpage button {
-        width: 150px;
-        height: 30px;
-        margin-left: 20px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7);
+        @include backpage;
+    }
+}
+
+@media (max-width: 960px) {
+    .birthday-tariff-main {
+        @include main960;
+        height: 100%;
+        p, #birthday-title li, span, #birthday-1 {
+            font-size: $fontSize;
+        }
+        .birthday-tariff-backpage {
+            padding-bottom: 1px;
+            button {
+                @include backpage_960;                            
+            }
+        } 
     }
 }

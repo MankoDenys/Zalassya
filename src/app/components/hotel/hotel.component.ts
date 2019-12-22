@@ -10,6 +10,12 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HotelComponent implements OnInit {
 
+  isShow = true;  
+
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
+
   constructor(config: NgbCarouselConfig) {  
     config.interval = 2000;  
     config.wrap = true;  

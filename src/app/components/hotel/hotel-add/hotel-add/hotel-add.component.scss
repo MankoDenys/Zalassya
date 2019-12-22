@@ -1,7 +1,16 @@
 @import '../../../../../styles.scss';
 .add-main {
     @include main;
-    .add-about { 
+    .add-ban {
+        width: 40%;
+        img {
+            box-shadow: #777 2px 2px 13px;
+            max-width: 100%;
+            float: left;
+            margin: 50px;
+        }
+    }
+    .add-title { 
         margin: 0 20px 0 20px;
         h5 {
             color: #003b6e;
@@ -13,22 +22,37 @@
             padding-top: 20px;
             margin-top: 0;
         }
-        img {
-            float: left;
-            box-shadow: #777 2px 2px 13px;
-            margin: 50px;
-        }
         span {
             text-transform: uppercase;
         }
     }
     .add-backpage button {
-        width: 150px;
-        height: 30px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7);
+        @include backpage;
         margin: 50px 50px 50px 20px;
+    }
+    .add-gapline {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 960px) {
+    .add-main {
+        @include main960;
+        height: 100%;
+        .add-ban {
+            width: 80%;
+            margin: auto; 
+            img {
+                float: none;
+                margin: 40px 0 0 0;                
+            }
+        }
+        .add-title h5, p, span {
+            font-size: $fontSize;
+        }
+        .add-backpage button {
+            @include backpage_960;                            
+        }
     }
 }
 

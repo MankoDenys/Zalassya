@@ -38,18 +38,34 @@ body {
     color: #3879b4;
     font-weight: 700;
 }
-@mixin blue-button {
+@mixin blue-button-a {
+    display: block;
     width: 120px;
     height: 30px;
     background: linear-gradient(0deg, #37678C, #69C7FC);
     border: none;
-}
-@mixin blue-button-a {
     text-decoration: none;
+    text-align: center;
     color: #fff;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
+    padding-top: 5px;
+}
+@mixin backpage {
+    width: 150px;
+    height: 30px;
+    margin: 0 0 20px 20px;
+    color: azure;
+    font-size: 18px;
+    background: linear-gradient(0deg, #888888, #F7F7F7)
+}
+@mixin backpage_960 {
+    display: block;
+    width: 45%;
+    height: 50px;
+    margin: 40px auto 40px auto;
+    font-size: $fontSize;
 }
 @mixin img-style {
     box-shadow: #ccc 0 0 5px;
@@ -77,6 +93,12 @@ body {
     grid-gap: 1vw;
     justify-items: center;
 }
-$mark-book: url('../../../assets/img/book3.png');
+@mixin img-interior {
+    box-shadow: #ccc 0 0 5px;
+    border: 3px solid #fff;
+    max-width: 100%;
+    margin: 20px; 
+}
+$mark-book: url('https://picua.org/images/2019/11/21/0c2dbf760660246ec5094b5b875916f1.png');
 $fontSize: 22px;
 

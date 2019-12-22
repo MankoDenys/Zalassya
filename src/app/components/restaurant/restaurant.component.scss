@@ -23,11 +23,8 @@
         h2 {
             @include h2style;
         }
-        button {
-            @include blue-button;
-            a {
-                @include blue-button-a;
-            }
+        a {
+            @include blue-button-a;
         }
         .rest-pic {
             width: 100%;           
@@ -69,13 +66,12 @@
                     text-align: center;
                 }
             }
-            button {
+            a {
                 width: 100%;
                 height: 50px;
                 margin: 0 auto 40px auto;
-                a {
-                    font-size: $fontSize;
-                }                
+                font-size: $fontSize;
+                padding-top: 10px;               
             }
         }
     }

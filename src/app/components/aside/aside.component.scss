@@ -1,8 +1,9 @@
 aside {
     width: 20%;
+    min-width: 225px;
     height: 700px;
     float: left;
-    margin: 20px 0 0 130px;
+    margin: 1.5% 0 0 9%;
     color: #fff;    
     .sitebar-reservation-ua {
         border-radius: 5px;
@@ -93,21 +94,6 @@ aside {
         margin-top: 20px;
         box-shadow: #777 2px 2px 7px;
         cursor: pointer;
-    }
-    .aside-galery {
-        margin-top: 20px;
-        h3 {
-            color: #00407a;
-        }
-        img {
-            width: 30%;
-            border-radius: 5px;
-            float: left;
-            margin-right: 10px;            
-        }
-        .aside-galery-last {
-            margin: 0;
-        }
     }
 }
 

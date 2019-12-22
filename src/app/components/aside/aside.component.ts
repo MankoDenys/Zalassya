@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideComponent implements OnInit {
 
+  isShow = true;  
+
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
+
   constructor() { }
 
   ngOnInit() {

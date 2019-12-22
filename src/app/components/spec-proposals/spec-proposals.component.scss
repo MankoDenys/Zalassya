@@ -25,11 +25,9 @@
                     @include h1style;
                     text-transform: uppercase;
                 }
-                button {
-                    @include blue-button;
-                    a {
-                        @include blue-button-a;
-                    }
+                a {
+                    @include blue-button-a;
+                    margin: auto;
                 }
             }
             .spec-prop-pic {
@@ -73,13 +71,12 @@
                     h1 {
                         font-size: 26px;
                     }
-                    button {
+                    a {
                         width: 50%;
                         height: 50px;
                         margin: 0 auto 40px auto;
-                        a {
-                            font-size: $fontSize;
-                        }                
+                        font-size: $fontSize; 
+                        padding-top: 10px;                                      
                     }
                 }              
             }

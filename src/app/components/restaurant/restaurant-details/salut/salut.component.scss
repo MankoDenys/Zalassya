@@ -1,15 +1,12 @@
 @import '../../../../../styles.scss';
 .salut-main {
     @include main;
-    img {
-        width: 360px;
-        margin: 20px;
-        box-shadow: #ccc 0 0 5px;
-        border: 3px solid #fff;
-        
-    }
-    .salut-ban img {
-        float: left;
+    .salut-ban {
+        width: 50%;
+        img {
+            float: left;
+            @include img-interior;            
+        }
     }
     h1 {
         @include h1style;
@@ -22,18 +19,120 @@
         font-weight: bold;
         }
     ul li {
-            list-style-image: url('../../../../../assets/img/book3.png');
+            list-style-image: $mark-book;
+            a {
+                color: inherit;
+            }
         }
     .salut-title h1 {
         padding-top: 20px;
         text-align: center;
     }
+    .salut-fotogelery {
+        width: 50%;
+        img {
+            @include img-interior; 
+            cursor: pointer;         
+        }
+        .black-window {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 0;
+        }
+        .modal-close {
+            margin: 0;
+            border: none;
+            box-shadow: none;
+            position: fixed;
+            right: 0;
+            z-index: 2;
+            cursor: pointer;
+        }
+      .slider {
+          width: 100%;
+          position: relative;
+          padding-top: 40%;
+          margin: 0 auto;
+          img {
+            margin: 0;
+            border: none;
+            box-shadow: none;
+          }
+      }
+      .slider>img{        
+          position: absolute;
+          left: 50%; 
+          margin-left: -30%;
+          top: 0;
+          transition: all 0.5s;
+          width: 60%;
+      }
+      .slider input[name='slide_switch'] {
+          display: none;
+      }
+      .slider label {
+          margin-top: 15px;
+          margin-right: 4.4%;
+          border: 3px solid #999;
+          float: left;
+          cursor: pointer;
+          transition: all 0.5s;
+          opacity: 0.6;
+      }
+      label#first-pic {
+          margin-left: 20%;
+      }
+      .slider label img{
+          display: block;
+          width: 8vw;
+      }
+      .slider input[name='slide_switch']:checked+label {
+          border-color: #666;
+          opacity: 1;
+      }
+      .slider input[name='slide_switch'] ~ img {
+          opacity: 0;
+          transform: scale(1.1);
+      }
+      .slider input[name='slide_switch']:checked+label+img {
+          opacity: 1;
+          transform: scale(1);
+      }
+    }
     .salut-backpage button {
-        width: 150px;
-        height: 30px;
-        margin-left: 20px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7);
+        @include backpage;
+    }
+    .salut-gapline {
+        padding: 1px;
     }
 }
+
+@media (max-width: 960px) {
+    .salut-main {
+        @include main960;
+        .salut-ban {
+            width: 80%;
+            margin: auto; 
+            img {
+                float: none;
+                margin: 40px 0 0 0;                
+            }
+        }
+        .salut-title,
+        .salut-contact,
+        .salut-fotogelery {            
+            h1, p, li, a {
+                font-size: $fontSize;
+            }
+        }
+        .salut-backpage button {
+            @include backpage_960;                             
+        }
+    }
+}
+

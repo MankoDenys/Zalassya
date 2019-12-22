@@ -6,14 +6,18 @@
     border-radius: 5px;
     box-shadow: #777 2px 2px 13px;
     background: #fff;
-    .tour-title {
-        margin: 20px;
+    .tour-ban {
+        width: 40%;
         img {
             box-shadow: #777 2px 2px 13px;
-            width: 360px;
+            max-width: 100%;
             float: left;
             margin: 50px;
         }
+    }
+    .tour-title {
+        margin: 20px;
+       
         h5 {
             padding-top: 50px;
             color: #003b6e;
@@ -26,13 +30,36 @@
         }
         ul li {
             list-style: none;
+            a {
+                color: inherit;
+            }
         }        
     }
     .tour-backpage button {
-        width: 150px;
-        height: 30px;
-        color: azure;
-        font-size: 18px;
-        background: linear-gradient(0deg, #888888, #F7F7F7);
+        @include backpage;
+    }
+    .tour-gapline {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 960px) {
+    .tour-main {
+        @include main960;
+        height: 100%;
+        .tour-ban {
+            width: 80%;
+            margin: auto; 
+            img {
+                float: none;
+                margin: 40px 0 0 0;                
+            }
+        }
+        .tour-title h5, p, li, a {
+            font-size: $fontSize;
+        }
+        .tour-backpage button {
+            @include backpage_960;                             
+        }
     }
 }
